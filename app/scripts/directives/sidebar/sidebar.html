@@ -5,12 +5,32 @@
             <li ui-sref-active="active">
                 <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
-            <li ui-sref-active="active">
+           <li ui-sref-active="active">
 
-                <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span></span></a>
+                <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics<span></span></a>
 
             </li>
-            <li ui-sref-active="active">
+            <li ng-class="{active: collapseVar==2}">
+                <a href="" ng-click="check(2)"><i class="fa fa-sitemap fa-fw"></i> Resources<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.frameworks">Frameworks</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.mesos">Mesos</a>
+                    </li>
+                     <li ui-sref-active="active">
+                        <a ui-sref="dashboard.network">Network</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.storage">Storage</a>
+                    </li>
+               </ul>
+                <!-- /.nav-second-level -->
+            </li>
+ 
+           <li ui-sref-active="active">
                 <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
             </li>
             <li ui-sref-active="active">
@@ -41,39 +61,7 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-            <li ng-class="{active: collapseVar==2}">
-                <a href="" ng-click="check(2)"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
-                        class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=2">
-                    <li>
-                        <a href="">Second Level Item</a>
-                    </li>
-                    <li>
-                        <a href="">Second Level Item</a>
-                    </li>
-                    <li ng-init="third=!third" ng-class="{active: multiCollapseVar==3}">
-                        <a href="" ng-click="multiCheck(3)">Third Level <span class="fa arrow"></span></a>
-                        <ul class="nav nav-third-level" collapse="multiCollapseVar!=3">
-                            <li>
-                                <a href="">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="">Third Level Item</a>
-                            </li>
-                            <li>
-                                <a href="">Third Level Item</a>
-                            </li>
-
-                        </ul>
-                        <!-- /.nav-third-level -->
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
-            </li>
-            <li ng-class="{active:collapseVar==4}">
+           <li ng-class="{active:collapseVar==4}">
                 <a href="" ng-click="check(4)"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span
                         class="fa arrow"></span></a>
                 <ul class="nav nav-second-level" collapse="collapseVar!=4">
@@ -86,7 +74,7 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-            <li><a href="http://www.strapui.com/">Premium Angular Themes</a></li>
+            <li><a href="http://www.google.com">Premium Support</a></li>
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

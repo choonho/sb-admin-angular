@@ -93,6 +93,11 @@ angular
           }
         }
       })
+      .state('dashboard.resource',{
+        templateUrl:'views/resource.html',
+        url:'/resource'
+    })
+ 
       .state('dashboard.form',{
         templateUrl:'views/form.html',
         url:'/form'
