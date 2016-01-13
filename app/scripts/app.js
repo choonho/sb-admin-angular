@@ -93,15 +93,39 @@ angular
           }
         }
       })
-      .state('dashboard.resource',{
-        templateUrl:'views/resource.html',
-        url:'/resource'
+
+
+      .state('dashboard.mesos',{
+        templateUrl:'views/resource/mesos.html',
+        controller: 'SingularityCtrl',
+        url:'/resource.mesos',
+        resolve: {
+          loadMyFiles:function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              name:'sbAdminApp',
+              files:[
+              'scripts/controllers/singularity.js'
+              ]
+            })
+          }
+        }
+        
     })
  
-      .state('dashboard.form',{
+ 
+     .state('dashboard.form',{
         templateUrl:'views/form.html',
         url:'/form'
     })
+       .state('dashboard.devops',{
+        templateUrl:'views/pages/devops.html',
+        url:'/provisioning/devops'
+    })
+       .state('dashboard.cosbench',{
+        templateUrl:'views/pages/cosbench.html',
+        url:'/provisioning/cosbench'
+    })
+
       .state('dashboard.blank',{
         templateUrl:'views/pages/blank.html',
         url:'/blank'

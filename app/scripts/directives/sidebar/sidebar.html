@@ -5,41 +5,52 @@
             <li ui-sref-active="active">
                 <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
-           <li ui-sref-active="active">
-
-                <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics<span></span></a>
-
-            </li>
-            <li ng-class="{active: collapseVar==2}">
-                <a href="" ng-click="check(2)"><i class="fa fa-sitemap fa-fw"></i> Resources<span
+             <li ng-class="{active: collapseVar==1}">
+                <a href="" ng-click="check(1)"><i class="fa fa-cloud-download fa-fw"></i> Provisioning<span
                         class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.frameworks">Frameworks</a>
+                        <a ui-sref="dashboard.new">+ Create New</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.mesos">Mesos</a>
+                        <a ui-sref="dashboard.devops">DevOps</a>
                     </li>
                      <li ui-sref-active="active">
-                        <a ui-sref="dashboard.network">Network</a>
+                        <a ui-sref="dashboard.bigdata">Big Data</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="dashboard.storage">Storage</a>
+                        <a ui-sref="dashboard.cosbench">Benchmarking</a>
                     </li>
                </ul>
                 <!-- /.nav-second-level -->
             </li>
  
            <li ui-sref-active="active">
-                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
+                <a ui-sref="dashboard.chart"><i class="fa fa-bar-chart-o fa-fw"></i> Monitoring<span></span></a>
             </li>
-            <li ui-sref-active="active">
-                <a ui-sref="dashboard.form"><i class="fa fa-edit fa-fw"></i> Forms</a>
-            </li>
-            <li ng-class="{active: collapseVar==1}">{{dropDown}}
-                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> UI Elements<span
+            <li ng-class="{active: collapseVar==2}">
+                <a href="" ng-click="check(2)"><i class="fa fa-sitemap fa-fw"></i> Resources<span
                         class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                <ul class="nav nav-second-level" collapse="collapseVar!=2">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.resource.frameworks">Frameworks</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.mesos">Mesos</a>
+                    </li>
+                     <li ui-sref-active="active">
+                        <a ui-sref="dashboard.resource.network">Network</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.resource.storage">Storage</a>
+                    </li>
+               </ul>
+                <!-- /.nav-second-level -->
+            </li>
+           <li ng-class="{active: collapseVar==3}">{{dropDown}}
+                <a href="" ng-click="check(3)"><i class="fa fa-wrench fa-fw"></i> Settings<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=3">
                     <li ui-sref-active="active">
                         <a ui-sref="dashboard.panels-wells">Panels and Wells</a>
                     </li>
@@ -61,21 +72,7 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-           <li ng-class="{active:collapseVar==4}">
-                <a href="" ng-click="check(4)"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span
-                        class="fa arrow"></span></a>
-                <ul class="nav nav-second-level" collapse="collapseVar!=4">
-                    <li ng-class="{active: selectedMenu=='blank'}">
-                        <a ui-sref="dashboard.blank" ng-click="selectedMenu='blank'">Blank Page</a>
-                    </li>
-                    <li>
-                        <a ui-sref="login">Login Page</a>
-                    </li>
-                </ul>
-                <!-- /.nav-second-level -->
-            </li>
-            <li><a href="http://www.google.com">Premium Support</a></li>
-        </ul>
+           </ul>
     </div>
     <!-- /.sidebar-collapse -->
 </div> 
